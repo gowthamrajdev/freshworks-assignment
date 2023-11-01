@@ -14,3 +14,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+.fw-font-family {
+  font-family: var(--fw-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif);
+}

@@ -10,29 +10,14 @@
         src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/css/crayons-min.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
     <title>Company Background</title>
 </head>
 
 <body>
     <main>
-        <section>
-            <fw-label value="A small loader" color="yellow"></fw-label><br />
-            <fw-spinner size="small"></fw-spinner><br /><br />
-        </section>
-        <p id="data"></p>
+        <div id="customerCard"></div>
     </main>
 </body>
-<script defer>
-    (async function init() {
-        var testData = "<h2>new test</h2>";
-        var client;
-        client = await app.initialized();
-        client.events.on('app.activated', () => {
-            let p = document.getElementById('data');
-            p.innerHTML = testData;
-            console.log(`company_list_background placeholder: app is activated 🥁`);
-        });
-    })();
-</script>
-
+<script defer src="../scripts/order-details.js"></script>
 </html>
