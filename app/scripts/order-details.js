@@ -9,8 +9,10 @@ async function init() {
   });
 }
 
+const AWS_DOMAIN = 'https://ec2-51-20-92-174.eu-north-1.compute.amazonaws.com'
+
 function getCustomerCardTemplate(phoneNumber) {
-    const customerDetailsurl = phoneNumber ? `http://localhost:3001/customer-details?phoneNumber=${phoneNumber}` : `http://localhost:3001/customer-details`;  
+    const customerDetailsurl = phoneNumber ? `${AWS_DOMAIN}/customer-details?phoneNumber=${phoneNumber}` : `${AWS_DOMAIN}/customer-details`;  
     fetch(customerDetailsurl)
       .then((response) => {
         if (response.ok) {
@@ -57,7 +59,7 @@ function getCustomerCardTemplate(phoneNumber) {
 
 function onClickOrder(customerId) {
     console.log('clicked')
-    fetch(`http://localhost:3001/order-details?customerId=${customerId}`)
+    fetch(`${AWS_DOMAIN}/order-details?customerId=${customerId}`)
       .then((response) => {
         if (response.ok) {
           return response.json();
