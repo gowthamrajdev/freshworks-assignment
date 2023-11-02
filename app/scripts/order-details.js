@@ -9,8 +9,9 @@ async function init() {
   });
 }
 
-function getCustomerCardTemplate() {
-    fetch("http://localhost:3001/customer-details")
+function getCustomerCardTemplate(phoneNumber) {
+    const customerDetailsurl = phoneNumber ? `http://localhost:3001/customer-details?phoneNumber=${phoneNumber}` : `http://localhost:3001/customer-details`;  
+    fetch(customerDetailsurl)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -19,7 +20,15 @@ function getCustomerCardTemplate() {
         }
       })
       .then((customerDetails) => {
-        const customerCard = `<div>
+        let customerCard = '';
+        if (Object.keys(customerDetails).length === 0) {
+            customerCard = `<div
+            class="header fw-font-family fw-text-align-center fw-type-h6 fw-py-16 fw-px-16 fw-b-b-1 fw-bg-smoke-25"
+          >
+            No Records Found
+          </div>`;
+        } else {
+            customerCard = `<div>
             ${customerDetails.map(
               (customer) => `<div class="fw-font-family order-card">
                     <div class="fw-card-3 fw-p-20 fw-flex fw-flex-column">
@@ -37,6 +46,7 @@ function getCustomerCardTemplate() {
                     </div>`
             ).join("")}
         </div>`;
+        }
         var demo = document.getElementById("customerCard");
         demo.innerHTML = customerCard;
       })
@@ -115,3 +125,13 @@ function onClickOrder(customerId) {
         console.error(error);
       });
 }
+
+
+function onClickFilter() {
+    const phoneNumber = document.getElementById('phone-input').value;
+    if (phoneNumber) {
+        getCustomerCardTemplate(phoneNumber);
+    } else {
+        getCustomerCardTemplate();
+    }
+} 

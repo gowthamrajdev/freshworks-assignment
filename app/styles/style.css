@@ -33,3 +33,7 @@ html {
 .order-card-all {
   margin: 20px 0px;
 }
+
+.fw-text-align-center {
+  text-align: center;
+}
