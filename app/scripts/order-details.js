@@ -85,7 +85,7 @@ function onClickOrder(customerId) {
             <div
               class="header fw-type-h6 fw-py-16 fw-px-16 fw-b-b-1 fw-b-solid fw-b-smoke-100"
             >
-              Order Number ${order}
+              Order Number #${order}
             </div>
             ${orderDetails[order].map((orderItem, key) => `<div class="body">
             <div
