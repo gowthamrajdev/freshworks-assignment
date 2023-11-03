@@ -1,6 +1,15 @@
-## Your First App
+## Local Setup
 
-This app displays the name of the requester of a freshdesk ticket in the ticket_sidebar placeholder
+Step 1: Install nvm and node 18.
+
+Step 2: Install freshworks CLI, follow the steps given in the below link to setup CLI
+ - https://developers.freshworks.com/docs/app-sdk/v2.3/freshdesk/app-development-process/#install-the-fdk-+-cli
+
+Step 3: `fdk run`
+
+## Customer order App
+
+This app displays the customer details and order details in the customer orders details page.
 
 ### Files and Folders
     .
@@ -18,3 +27,7 @@ This app displays the name of the requester of a freshdesk ticket in the ticket_
     └── manifest.json             A JSON file holding meta data for app to run on platform
 
 Explore [more of app sample apps](https://community.developers.freshworks.com/t/freshworks-sample-apps/3604) on the Freshworks github respository.
+
+
+Note:
+1. Please update the `AWS_DOMAIN` URL from the `order-details.js`, If the AWS EC2 domain/IP changes.

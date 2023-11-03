@@ -57,6 +57,7 @@ function getCustomerCardTemplate(phoneNumber) {
       });
 }
 
+// onclick event for view orders
 function onClickOrder(customerId) {
     console.log('clicked')
     fetch(`${AWS_DOMAIN}/order-details?customerId=${customerId}`)
@@ -128,7 +129,7 @@ function onClickOrder(customerId) {
       });
 }
 
-
+// onclick event for mobile number filter
 function onClickFilter() {
     const phoneNumber = document.getElementById('phone-input').value;
     if (phoneNumber) {
