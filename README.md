@@ -11,6 +11,12 @@ Step 4: Login with your freshdesk account, append `?dev=true` in the URL and rel
 
     Ex: https://gowthamrajrajendran.freshdesk.com/a/apps/indev-freshworksassignment?dev=true
 
+### Importanct Note
+  1. Backend APIs are serving from AWS EC2 inctance,to setup backend in the local please follow the steps from `https://github.com/gowthamrajdev/fw-backend-assignment-/blob/main/README.md`
+
+  2.  Please update the `AWS_DOMAIN` URL to point `http://localhost:3001` from the `order-details.js`.
+
+
 ## Customer orders App
 
 This app displays the customer details and order details in the customer orders details page.
@@ -35,4 +41,4 @@ Explore [more of app sample apps](https://community.developers.freshworks.com/t/
 
 Note:
 1. If the AWS EC2 domain/IP changes, Please update the `AWS_DOMAIN` URL from the `order-details.js`.
-2. latest code is in branch `main`,
+2. latest code is in branch `main`.
