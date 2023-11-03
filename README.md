@@ -7,7 +7,11 @@ Step 2: Install freshworks CLI, follow the steps given in the below link to setu
 
 Step 3: `fdk run`
 
-## Customer order App
+Step 4: Login with your freshdesk account, append `?dev=true` in the URL and reload the page to see the `Customer orders` page from the left side navigation menu (last menu item).
+
+    Ex: https://gowthamrajrajendran.freshdesk.com/a/apps/indev-freshworksassignment?dev=true
+
+## Customer orders App
 
 This app displays the customer details and order details in the customer orders details page.
 
@@ -30,4 +34,4 @@ Explore [more of app sample apps](https://community.developers.freshworks.com/t/
 
 
 Note:
-1. Please update the `AWS_DOMAIN` URL from the `order-details.js`, If the AWS EC2 domain/IP changes.
+1. If the AWS EC2 domain/IP changes, Please update the `AWS_DOMAIN` URL from the `order-details.js`.
