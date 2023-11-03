@@ -9,7 +9,7 @@
         },
         "full_page_app": {
           "url": "views/orderdetails.html",
-          "icon": "styles/images/icon.svg"
+          "icon": "styles/images/cart_v3.png"
         }
       }
     }
