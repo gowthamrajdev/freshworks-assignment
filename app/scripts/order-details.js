@@ -78,6 +78,9 @@ function onClickOrder(customerId) {
           </div>`;
         } else {
             ordersCard =` <div class="fw-py-16">
+            <div class="fw-text-align-right"><fw-button onclick="onClickcloseOrder(${customerId})" size="icon" color="secondary"
+            ><fw-icon name="cross" size="10"></fw-icon>
+          </fw-button></div>
             ${Object.keys(orderDetails).map(order => `<section class="details fw-bg-smoke-25 order-card-all">
             <div
               class="header fw-type-h6 fw-py-16 fw-px-16 fw-b-b-1 fw-b-solid fw-b-smoke-100"
@@ -138,3 +141,9 @@ function onClickFilter() {
         getCustomerCardTemplate();
     }
 } 
+
+function onClickcloseOrder(customerId) {
+  const orderCardEle = document.getElementById(`${customerId}_data`);
+  orderCardEle.innerHTML = `<section id=${customerId}_data class="fw-flex fw-flex-column fw-mt-4">
+  </section>`;
+}
