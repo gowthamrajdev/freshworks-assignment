@@ -35,3 +35,4 @@ Explore [more of app sample apps](https://community.developers.freshworks.com/t/
 
 Note:
 1. If the AWS EC2 domain/IP changes, Please update the `AWS_DOMAIN` URL from the `order-details.js`.
+2. latest code is in branch `main`,
